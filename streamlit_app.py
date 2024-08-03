@@ -30,7 +30,7 @@ else:
 
     # Create a chat input field to allow the user to enter a message. This will display
     # automatically at the bottom of the page.
-    if prompt := st.chat_input("Welcome to Myer! How can I help you today?"):
+    if prompt := st.chat_input("Welcome! How can I help you today?"):
 
         # Store and display the current prompt.
         st.session_state.messages.append({"role": "user", "content": prompt})
@@ -52,9 +52,9 @@ else:
         with st.chat_message("assistant"):
             response = st.write_stream(stream)
 
-        st.session_state.messages.append({"role": "assistant", "content": "Here are some suggestions: "})
-        st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/stella-daphne-dress-in-pink-orange"})
-        st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/basque-hanky-hem-dress-in-assorted"})
+        # st.session_state.messages.append({"role": "assistant", "content": "Here are some suggestions: "})
+        # st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/stella-daphne-dress-in-pink-orange"})
+        # st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/basque-hanky-hem-dress-in-assorted"})
 
 
         st.session_state.messages.append({"role": "assistant", "content": response})
