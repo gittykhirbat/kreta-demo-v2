@@ -51,8 +51,14 @@ else:
         # session state.
         with st.chat_message("assistant"):
             response = st.write_stream(stream)
+
+        # st.session_state.messages.append({"role": "assistant", "content": "Here are some suggestions: "})
+        # st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/stella-daphne-dress-in-pink-orange"})
+        # st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/basque-hanky-hem-dress-in-assorted"})
+
+
         st.session_state.messages.append({"role": "assistant", "content": response})
 
-        st.session_state.messages.append({"role": "assistant", "content": "Here are some suggestions: "})
-        st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/stella-daphne-dress-in-pink-orange"})
-        st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/basque-hanky-hem-dress-in-assorted"})
+        # st.session_state.messages.append({"role": "assistant", "content": "Here are some suggestions: "})
+        # st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/stella-daphne-dress-in-pink-orange"})
+        # st.session_state.messages.append({"role": "assistant", "content": "https://www.myer.com.au/p/basque-hanky-hem-dress-in-assorted"})
